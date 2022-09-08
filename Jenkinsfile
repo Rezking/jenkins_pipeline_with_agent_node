@@ -18,8 +18,8 @@ pipeline {
         }
         stage('create docker image'){
             steps{
-                sh 'docker build -t myflaskapp .'
-                sh 'docker run -d -p 5000:5000 myflaskapp'
+                sh 'sudo docker build -t myflaskapp .'
+                sh 'sudo docker run -d -p 5000:5000 myflaskapp'
                 echo 'deployed successfully'
             }
         }
