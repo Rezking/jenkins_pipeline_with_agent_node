@@ -13,7 +13,7 @@ pipeline {
         stage('build on main branch'){
             steps{
                 sh 'pip install -r requirements.txt'
-                sh 'python main.py'
+                sh 'python3 main.py'
             }
         }
         stage('create docker image'){
